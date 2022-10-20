@@ -6,6 +6,6 @@
 
 int main(void)
 {
-	free(ft_calloc(42));
-
+	//free(ft_calloc(42));
+	return 0;
 }
