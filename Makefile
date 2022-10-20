@@ -1,4 +1,4 @@
-
+#remove wildcard
 SRCS=$(wildcard *.c)
 NAME= libft.a
 OBJS=$(SRCS:.c=.o)
@@ -6,17 +6,20 @@ OBJS=$(SRCS:.c=.o)
 AC=ar
 AFLAGS=-rc
 CC=gcc
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -g
 INCLUDE := -I include
-#create library using object files 
+#create library using object files
 
 all: $(NAME)
 
-$(NAME): $(OBJS) 
-	$(AC) $(AFLAGS) $(NAME) $(OBJS) 	
+$(NAME): $(OBJS)
+	$(AC) $(AFLAGS) $(NAME) $(OBJS)
 #create object files compiling c files with header dependency
 $(OBJS): $(SRCS) $(HDRS)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $(SRCS)
+
+
+bonus: re
 
 clean:
 	@rm -f $(OBJS)
@@ -33,3 +36,4 @@ re:     fclean $(NAME)
 # Makes sure that gnu make will still run even if files called
 # clean / fclean / all and re already exist in the directory
 .PHONY: all clean fclean re
+

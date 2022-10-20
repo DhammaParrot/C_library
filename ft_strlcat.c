@@ -1,4 +1,3 @@
-
 #include "libft.h"
 
 static	size_t	ft_strnlen(char *str, size_t max)

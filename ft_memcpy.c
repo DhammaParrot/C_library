@@ -1,6 +1,5 @@
-
 #include "libft.h"
-
+// add reference to memmove
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	const char	*s;

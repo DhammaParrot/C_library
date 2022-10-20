@@ -1,4 +1,3 @@
-
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -11,7 +10,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (*s == '\0')
 			return (0);
-	s++;
+		s++;
 	}
 	return ((char *)s);
 }
